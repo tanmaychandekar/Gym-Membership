@@ -1,0 +1,287 @@
+<html> 
+    <head>
+        <title>Gym Members</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        
+        
+
+        <!-- Time Display .js -->
+        <script type="text/javascript"> 
+            function display_c(){
+            var refresh=1000; // Refresh rate in milli seconds
+            mytime=setTimeout('display_ct()',refresh)
+            }
+            
+            
+            function display_ct() {
+                var x = new Date()
+                var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getYear(); 
+                x1 = x1 + " - " +  x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds();
+                document.getElementById('datetime').innerHTML = x1;
+                display_c();
+            }
+             
+        </script>     
+    </head>
+    <style>
+        a{
+            color: black;
+            text-decoration: none;
+        }
+
+        a:active{
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: black;
+            text-decoration: none;
+        }
+
+        a:visited{
+            color: black;
+            text-decoration: none;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+    </style>
+
+    <!-- Time Display .js -->
+    
+
+    <body onload="display_ct()"> 
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar navbar-inverse bg-dark navbar-dark">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">Gym Membership Dashboard</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"> <span class="material-icons" style="color: white;">sync_alt</span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="row" style="height: 100%;">
+       <div class="col-md-2" style=" background-color: #001C33 ;height:100% ;">
+        
+        <!-- Hello admin screen     -->
+            <div class="row">
+                <div class="col-md-12" style="background-color: #006393; margin-top: 20px; padding-left: 30px; border-radius: 10px; color: white;">
+                    <h3>Hello Admin!</h3>
+                    <span id='datetime'></span>
+                    <hr style="border: 1.5px solid black; width: 100%;">
+                </div>
+            </div>
+        
+        <!-- Options List -->
+            <div class="row">
+                <div class="col-md-12" style="background-color: #006393; margin-top: 20px; padding-left: 30px; font-size: 20px; border-radius: 10px; " >
+                    <div class="row" style=" margin-bottom: 20px; margin-top: 20px; ">
+
+                        <tr>
+                            <td>
+                                <i class="glyphicon glyphicon-stats"></i>
+                            </td>
+                            <td>
+                                <a href="index.html"><span style="color: white;">Dashboard</span></a>
+                            </td>
+                        </tr>
+                        
+                        
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+
+                        <tr>
+                            <td>
+                                <i class="material-icons" style="font-size: 20px;">people</i>
+                            </td>
+                            <td>
+                                <a href="members.html"><span style="color: white;">Manage Members</span></a>
+                            </td>
+                        </tr>
+                        
+                    </div>
+                    
+                    <div class="row" style="  margin-bottom: 20px;">
+
+                        <tr>
+                            <td>
+                                <i class="fa fa-male" style="font-size: 25px;"></i>        
+                            </td>
+                            <td>
+                                <a href = "trainers.html"><span style="color: white;">Manage Trainers</span></a>
+                            </td>
+                        </tr>
+                        
+                    </div>
+
+                    <div class="row" style="  margin-bottom: 20px;">
+
+                        <tr>
+                            <td>
+                                <i class="fas fa-inventory" style="font-size: 25px;"></i>        
+                            </td>
+                            <td>
+                                <a href = "inventory.html"><span style="color: white;">Inventory</span></a>
+                            </td>
+                        </tr>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+       </div>
+       
+       
+
+        <div class="col-md-10" style=" height:100% ;">
+
+            <div class="row" style="height: 100%;">
+                <div class="col-md-8" style=" height:100% ;">
+                    <div class="row" style="height: 100%;">
+                        
+                        <div class="col-md-4 center" style="height: 30%; width: 100% ; border-radius: 15px;">
+                            <div class="card" style=" background-color: #E2E2E2; border-radius: 20px; padding: 5px; position: absolute;">
+                                <div class="card-block">
+                                  <h4 class="card-title">Mr. Tanmay</h4>
+                                  <h6 class="card-subtitle text-muted">Member Details</h6>
+                                  <p class="card-text p-y-1">P.no: <b>9515350721</b> | 
+                                                            Age: <b>20</b> | 
+                                                            Email: <b>tanmaychandekar33@gmail.com</b> |
+                                                            Address: <b>Plot no 290 Balamrai colony Mahendra Hills Secunderabad</b> | 
+                                                            Membership Type: <b>Year</b>
+                                  </p> 
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col-md-4 center" style="height: 30%; width: 100% ;  border-radius: 15px;">
+                            <div class="card" style=" background-color: #E2E2E2; border-radius: 20px; padding: 5px; position: absolute;">
+                                <div class="card-block">
+                                  <h4 class="card-title">Mr. Tanmay</h4>
+                                  <h6 class="card-subtitle text-muted">Member Details</h6>
+                                  <p class="card-text p-y-1">P.no: <b>9515350721</b> | 
+                                                            Age: <b>20</b> | 
+                                                            Email: <b>tanmaychandekar33@gmail.com</b> |
+                                                            Address: <b>Plot no 290 Balamrai colony Mahendra Hills Secunderabad</b> | 
+                                                            Membership Type: <b>Year</b>
+                                  </p> 
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="col-md-4 center" style="height: 30%; width: 100% ; border-radius: 15px;">
+                            <div class="card" style=" background-color: #E2E2E2; border-radius: 20px; padding: 5px; position: absolute;">
+                                <div class="card-block">
+                                  <h4 class="card-title">Mr. Tanmay</h4>
+                                  <h6 class="card-subtitle text-muted">Member Details</h6>
+                                  <p class="card-text p-y-1">P.no: <b>9515350721</b> | 
+                                                            Age: <b>20</b> | 
+                                                            Email: <b>tanmaychandekar33@gmail.com</b> |
+                                                            Address: <b>Plot no 290 Balamrai colony Mahendra Hills Secunderabad</b> | 
+                                                            Membership Type: <b>Year</b>
+                                  </p> 
+                                </div>
+                              </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+    <!-- ADDING A NEW MEMBER  -->
+
+                <div class="col-md-4" style="border-left: solid 2px black; height: 100%; overflow: scroll;">
+                    
+                    <div class="row center" style="height: 10%; background-color:#BDBDBD; border-radius: 10px;">
+                        <div class="col-md-12" style="text-align: center;">
+                            <h3>Add New Member</h3>
+                        </div>
+                    </div>
+
+                    <div class="row" style="height: 90%;">
+                        <div class="col-md-12" style="font-size: 15px; ">
+                            <form action="/action_page.php" class="was-validated">
+
+                                <div class="form-group">
+                                  <label for="uname">Name: </label>
+                                  <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                                  <div class="valid-feedback">Valid.</div>
+                                  <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="age">Age: </label>
+                                  <input type="text" class="form-control" id="age" placeholder="Enter age" name="age" required>
+                                  <div class="valid-feedback">Valid.</div>
+                                  <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pno">Phone Number: </label>
+                                    <input type="number" class="form-control" id="pno" placeholder="Enter phone no" name="pno" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                  </div>
+                                <div class="form-group">
+                                    <label for="email">Email ID: </label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="add">Address: </label>
+                                    <input type="text" rows="5" class="form-control" id="add" placeholder="Enter address" name="add" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>  
+
+                                <div class="form-group">
+                                    <label for="sel1">Membership Type</label>
+                                    <select class="form-control" id="sel1">
+                                      <option>Monthly</option>
+                                      <option>6 Months</option>
+                                      <option>Year</option>
+                                    </select>
+                                  </div>
+
+                                <div class="form-group">
+                                    <label for="addDate">Admission Date: </label>
+                                    <input type="date" class="form-control" id="addDate" placeholder="Enter Date" name="addDate" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                        
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                              </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+                
+           </div>
+
+       
+    </div>
+
+
+    </body>
+</html>
